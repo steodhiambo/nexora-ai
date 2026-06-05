@@ -8,7 +8,7 @@ import {
   CalendarCheck,
   Workflow,
   Cpu,
-  Pipelines,
+  ArrowLeftRight,
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -51,7 +51,7 @@ const solutions = [
     description: "Autonomous AI agents that handle complex tasks and decision-making processes.",
   },
   {
-    icon: Pipelines,
+    icon: ArrowLeftRight,
     title: "Sales Pipeline Automation",
     description: "Automated pipeline management from lead capture to closed deal.",
   },

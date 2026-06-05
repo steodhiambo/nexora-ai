@@ -9,8 +9,8 @@ function DashboardIllustration() {
   return (
     <div className="relative w-full max-w-lg mx-auto">
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ scale: 0.95 }}
+        animate={{ scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
         className="relative"
       >
@@ -24,14 +24,9 @@ function DashboardIllustration() {
           <div className="grid grid-cols-2 gap-4">
             <div className="col-span-2 bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl p-4 text-white">
               <p className="text-xs font-medium opacity-80">Total Leads</p>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.8 }}
-                className="text-2xl font-bold mt-1"
-              >
+              <p className="text-2xl font-bold mt-1">
                 2,847
-              </motion.p>
+              </p>
               <div className="flex items-center gap-1 mt-2 text-xs">
                 <span className="text-green-300">↑ 24%</span>
                 <span className="opacity-70">vs last month</span>
@@ -40,14 +35,9 @@ function DashboardIllustration() {
 
             <div className="bg-slate-50 rounded-xl p-4">
               <p className="text-xs font-medium text-slate-500">Conversion</p>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.0 }}
-                className="text-xl font-bold text-secondary mt-1"
-              >
+              <p className="text-xl font-bold text-secondary mt-1">
                 18.4%
-              </motion.p>
+              </p>
               <div className="mt-3 bg-green-100 rounded-full h-2">
                 <motion.div
                   initial={{ width: 0 }}
@@ -60,14 +50,9 @@ function DashboardIllustration() {
 
             <div className="bg-slate-50 rounded-xl p-4">
               <p className="text-xs font-medium text-slate-500">Response</p>
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 1.1 }}
-                className="text-xl font-bold text-secondary mt-1"
-              >
+              <p className="text-xl font-bold text-secondary mt-1">
                 2.4s
-              </motion.p>
+              </p>
               <p className="text-xs text-slate-400 mt-1">Avg. response</p>
             </div>
 
@@ -125,19 +110,10 @@ export function Hero() {
 
       <Container className="relative pt-24 pb-16 sm:pt-32 sm:pb-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-          >
-            <motion.span
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-600 mb-6"
-            >
+          <div>
+            <span className="inline-flex items-center rounded-full border border-primary-200 bg-primary-50 px-4 py-1.5 text-sm font-medium text-primary-600 mb-6">
               AI-Powered Growth Platform
-            </motion.span>
+            </span>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-secondary leading-[1.1]">
               Transform Leads Into Revenue{" "}
@@ -168,12 +144,7 @@ export function Hero() {
               </Button>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.8 }}
-              className="mt-12 flex items-center gap-8 text-sm text-slate-500"
-            >
+            <div className="mt-12 flex items-center gap-8 text-sm text-slate-500">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div
@@ -185,16 +156,12 @@ export function Hero() {
                 ))}
               </div>
               <span>Trusted by <strong className="text-secondary">200+</strong> businesses</span>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-          >
+          <div>
             <DashboardIllustration />
-          </motion.div>
+          </div>
         </div>
       </Container>
     </section>

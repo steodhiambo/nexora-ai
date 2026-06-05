@@ -31,8 +31,8 @@ export function CTA() {
       <Container className="relative">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
@@ -78,8 +78,56 @@ export function CTA() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ y: 20 }}
+            whileInView={{ y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+          >
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+              Ready To Automate <br />
+              <span className="text-accent">Growth?</span>
+            </h2>
+            <p className="mt-6 text-lg text-primary-100 leading-relaxed max-w-md">
+              Book a free strategy session and discover how AI automation can transform your business operations.
+            </p>
+
+            <div className="mt-10 space-y-4">
+              <a
+                href="https://calendly.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 w-full sm:w-auto bg-white text-primary-600 font-semibold px-8 py-4 rounded-xl hover:bg-primary-50 transition-all duration-200 shadow-xl hover:shadow-2xl"
+              >
+                <Calendar className="w-5 h-5" />
+                Book Your Free Strategy Session
+                <ArrowRight className="w-5 h-5" />
+              </a>
+
+              <div className="flex gap-4 pt-4">
+                <a
+                  href="https://wa.me/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-green-500/20 text-green-300 hover:bg-green-500/30 transition-all text-sm font-medium border border-green-400/20"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </a>
+                <a
+                  href="mailto:hello@nexora.ai"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 text-white hover:bg-white/20 transition-all text-sm font-medium border border-white/20"
+                >
+                  <Mail className="w-4 h-4" />
+                  hello@nexora.ai
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10"

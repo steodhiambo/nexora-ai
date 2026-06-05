@@ -84,8 +84,8 @@ const workflows: Workflow[] = [
 function WorkflowDiagram({ workflow }: { workflow: Workflow }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ y: 30 }}
+      whileInView={{ y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       className="bg-white rounded-2xl border border-slate-100 p-6 hover:shadow-lg hover:border-primary-100 transition-all duration-300"

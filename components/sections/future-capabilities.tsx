@@ -9,7 +9,6 @@ import {
   HeadphonesIcon,
 } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { SectionHeader } from "@/components/ui/section-header";
 import { StaggerContainer, StaggerItem } from "@/components/animations/stagger-container";
 
 const capabilities = [
@@ -67,17 +66,17 @@ export function FutureCapabilities() {
       </div>
 
       <Container className="relative">
-        <SectionHeader
-          badge="The Future of Business Automation"
-          title="Beyond Today's Automation"
-          description="Next-generation AI capabilities that will define how businesses operate in the coming years."
-          className="text-white"
-          badge={
-            <span className="inline-flex items-center rounded-full border border-primary-300/30 bg-primary-500/10 px-4 py-1.5 text-sm font-medium text-primary-200 mb-6">
-              The Future of Business Automation
-            </span>
-          }
-        />
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="inline-flex items-center rounded-full border border-primary-300/30 bg-primary-500/10 px-4 py-1.5 text-sm font-medium text-primary-200 mb-6">
+            The Future of Business Automation
+          </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+            Beyond Today&apos;s Automation
+          </h2>
+          <p className="mt-6 text-lg sm:text-xl text-primary-200 leading-relaxed max-w-2xl mx-auto">
+            Next-generation AI capabilities that will define how businesses operate in the coming years.
+          </p>
+        </div>
 
         <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {capabilities.map((cap) => (

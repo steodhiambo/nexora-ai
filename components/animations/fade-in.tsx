@@ -21,16 +21,16 @@ export function FadeIn({
   const directionMap = {
     up: { y: 40 },
     down: { y: -40 },
-    left: { x: 40 },
-    right: { x: -40 },
+    left: { y: 40 },
+    right: { y: -40 },
     none: {},
   };
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, ...directionMap[direction] }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
+      initial={{ ...directionMap[direction] }}
+      whileInView={{ x: 0, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
       className={className}

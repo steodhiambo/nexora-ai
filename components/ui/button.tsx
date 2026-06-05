@@ -1,21 +1,28 @@
 "use client";
 
-import { forwardRef, type ButtonHTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { type ButtonHTMLAttributes } from "react";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "ghost" | "outline";
   size?: "sm" | "md" | "lg";
 }
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
-    return (
-      <motion.button
-        ref={ref}
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
+export function Button({
+  className,
+  variant = "primary",
+  size = "md",
+  children,
+  ...props
+}: ButtonProps) {
+  return (
+    <motion.div
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+      className="inline-flex"
+    >
+      <button
         className={cn(
           "inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 cursor-pointer",
           "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2",
@@ -35,10 +42,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {children}
-      </motion.button>
-    );
-  }
-);
-
-Button.displayName = "Button";
-export { Button, type ButtonProps };
+      </button>
+    </motion.div>
+  );
+}
